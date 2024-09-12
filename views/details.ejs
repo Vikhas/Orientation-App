@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+    <!-- font awesome cdn link  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- custom css file link  -->
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/images/favicon.png"
+        />
+    
+    <link rel="stylesheet" href="css/my-login.css">
+    <link href="/css/style.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">  -->
+    
+
+
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+    
+<!-- header section starts  -->
+<header class="topbar" data-navbarbg="skin6">
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header" data-logobg="skin6">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo icon -->
+                <b class="logo-icon">
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img
+                        src="/img/psg.png"
+                        alt="homepage"
+                        class="dark-logo"
+                        height="50"
+                        width="50"
+                    />
+                </b>
+             
+                <!--End Logo icon -->
+                <!-- Logo text -->
+                <span class="logo-text">
+                    <!-- dark Logo text -->
+                    <!-- <img
+                        src="../assets/images/logo-text.png"
+                        alt="homepage"
+                        class="dark-logo"
+                    /> -->
+                </span>
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <a
+                class="
+                    nav-toggler
+                    waves-effect waves-light
+                    text-dark
+                    d-block d-md-none
+                "
+                href="javascript:void(0)"
+                ><i class="ti-menu ti-close"></i
+            ></a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+        >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav me-auto mt-md-0">
+                <!-- ============================================================== -->
+                <!-- Search -->
+                <!-- ============================================================== -->
+
+                <li class="nav-item hidden-sm-down">
+                    <!-- <form class="app-search ps-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search for..."
+                        />
+                        <a class="srh-btn"
+                            ><i class="ti-search"></i
+                        ></a>
+                    </form> -->
+                    <h2 style="color: white; margin-left: -160px">
+                        PSG Institute of Technology and Applied
+                        Research
+                    </h2>
+                </li>
+                <li>
+                   
+                </li>
+            </ul>
+
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+        </div>
+    </nav>
+</header>
+
+<section class="h-100">
+
+<div class="container" style="text-align: center;height: 480px;margin-top: 12px;">
+    <h2>Date: <%= sch[0].date %></h2>
+    <h2>Day: <%= sch[0].day %></h2>
+    <h2>Batch: <%= sch[0].batch %></h2>
+
+<div class="card fat">
+
+    <div class="table-responsive mt-2" style="box-shadow: 0 4px 8px rgb(0 0 0 / 5%);">
+    
+            <table class="table table-hover w-55">
+                <thead class="table-success">
+                    <tr>
+                       
+     
+                        <th class="th-sm" colspan="1">Session</th>
+                        <th class="th-sm" >Time</th>
+                        <th class="th-sm" >Staff Incharge</th>
+                        <th class="th-sm" >Venue</th>
+                        
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% sch.forEach(sh =>{ %>
+                    <tr>
+                        <td>
+                            <span>
+                                <h6><%= sh.ses %></h6>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <h6><%= sh.stime %> to <%= sh.etime %></h6>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <h6><%= sh.staffinc %></h6>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <h6><%= sh.venue %></h6>
+                            </span>
+                        </td>
+                        
+                    </tr>
+                    <% }) %>
+                   
+
+                    
+                </tbody>
+            </table>
+            
+
+
+
+        
+        
+    </div>
+</div>
+
+
+</div>
+<footer style="position: fixed;left: 0;bottom: 0;width: 100%;color: white;text-align: center;"></footer>
+    <div class="row" style="margin-right: 0px;">
+
+        <div class="col-md-12 text-center" style="padding-top: 150px;font-size: medium;">
+          <p style="color: #b2b2b2;"> &copy; Copyright © 2022|CSE STUDENTS PSG INSTITUTE OF TECHNOLOGY AND APPLIED RESEARCH.<br />All Rights Reserved</p>
+        </div>
+      </div>
+
+</footer>
+</section>
+
+
+</body>
+</html>

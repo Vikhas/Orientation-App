@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Dashboard</title>
+
+    <!-- font awesome cdn link  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- custom css file link  -->
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/images/favicon.png"
+        />
+    
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="/css/style.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">  -->
+    
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+<header class="topbar" data-navbarbg="skin6">
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header" data-logobg="skin6">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo icon -->
+                <b class="logo-icon">
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img
+                        src="/img/psg.png"
+                        alt="homepage"
+                        class="dark-logo"
+                        height="50"
+                        width="50"
+                    />
+                </b>
+                <a href="/logout" class="btn btn-dark btn-lg" style="float: right;
+                position: absolute;
+                right: 10px;
+                top: 20px;">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+                </a>
+                <!--End Logo icon -->
+                <!-- Logo text -->
+                <span class="logo-text">
+                    <!-- dark Logo text -->
+                    <!-- <img
+                        src="../assets/images/logo-text.png"
+                        alt="homepage"
+                        class="dark-logo"
+                    /> -->
+                </span>
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <a
+                class="
+                    nav-toggler
+                    waves-effect waves-light
+                    text-dark
+                    d-block d-md-none
+                "
+                href="javascript:void(0)"
+                ><i class="ti-menu ti-close"></i
+            ></a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+        >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav me-auto mt-md-0">
+                <!-- ============================================================== -->
+                <!-- Search -->
+                <!-- ============================================================== -->
+
+                <li class="nav-item hidden-sm-down">
+                    <!-- <form class="app-search ps-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search for..."
+                        />
+                        <a class="srh-btn"
+                            ><i class="ti-search"></i
+                        ></a>
+                    </form> -->
+                    <h2 style="color: white; margin-left: -160px">
+                        PSG Institute of Technology and Applied
+                        Research
+                    </h2>
+                </li>
+                <li>
+                   
+                </li>
+            </ul>
+
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+<section class="features" id="features">
+
+    <h1 class="heading">Hello <%- user.name %></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <!-- <img src="images/f-icon1.png" alt=""> -->
+            <div class="heading">Details</div>
+            
+            <h3>Register No : <%- user.rollno %></h3>
+           
+            <h3>Department : <%- user.department %></h3>
+            <h3>Batch No : <%- user.batch %></h3>
+            
+            <!-- <a href="#" class="btn">read more</a> -->
+        </div>
+
+        <div class="box">
+            <div class="heading">Ongoing Session Details</div>
+            <% sch.forEach(sh =>{ %>
+            <% let starttime=sh.stime.split(":"); %>
+            <% let endtime=sh.etime.split(":"); %>
+            <% let startsec=parseInt(starttime[0] * 3600 + starttime[1] * 60); %>
+            <% let endsec=parseInt(endtime[0] * 3600 + endtime[1] * 60); %>
+            <% if(currsec>=startsec && currsec<=endsec){ %>
+            <h3>Day No : <%= sh.dayno %></h3>
+            <h3>Date : <%= sh.date %></h3>
+            <h3>Session : <%= sh.ses %></h3>
+            <h3>Time : <%= sh.stime %> to <%= sh.etime %></h3>
+            <h3>Venue : <%= sh.venue %></h3>
+            <h3>Staff Incharge : <%= sh.staffinc %></h3>
+            <h3>Batch Incharge : <%= sh.batchinc %></h3>
+            <% } %>
+            <% }); %>
+        
+        </div>
+
+      
+    </div>
+
+</section>
+<footer style="position: fixed;left: 0;bottom: 0;width: 100%;color: white;text-align: center;"></footer>
+    <div class="row" style="margin-right: 0px;">
+
+        <div class="col-md-12 text-center" style="padding-top: 150px;font-size: medium;">
+          <p style="color: #b2b2b2;"> &copy; Copyright © 2022|CSE STUDENTS PSG INSTITUTE OF TECHNOLOGY AND APPLIED RESEARCH.<br />All Rights Reserved</p>
+        </div>
+      </div>
+
+</footer>
+
+
+</body>
+</html>

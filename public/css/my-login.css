@@ -1,0 +1,175 @@
+html,
+body {
+    height: 100%;
+}
+
+
+body.my-login-page {
+    background-color: #f7f9fb;
+    font-size: 14px;
+}
+
+.my-login-page .brand {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    margin: 40px auto;
+    /*overflow: hidden;
+	border-radius: 50%;
+	margin: 40px auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	position: relative;
+	z-index: 1; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.my-login-page .brand img {
+    width: 100%;
+    
+
+
+    
+}
+
+.my-login-page .card-wrapper {
+    width: 450px;
+}
+
+.my-login-page .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.my-login-page .card.fat {
+    padding: 10px;
+}
+
+.my-login-page .card .card-title {
+    margin-bottom: 30px;
+}
+
+.my-login-page .form-control {
+    border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+    width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+    padding: 12px 10px;
+}
+
+.my-login-page .footer {
+    background-color: #3f3e3e;
+    font-family: Corbel;
+    height: 2.8rem;
+    /* position:absolute; */
+    bottom: 0;
+    font-size: 13px;
+
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+    .my-login-page .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .my-login-page .card.fat {
+        padding: 0;
+    }
+
+    .my-login-page .card.fat .card-body {
+        padding: 15px;
+    }
+}
+
+
+/* 
+@media screen and (max-width: 600px) {
+    .header{
+        display: unset;
+    }
+
+    .flex-child  h3{
+        display: unset;
+    }
+
+
+    .header img {
+        float: left;
+        display: inline;
+        width: 15%;
+        
+      }
+} */
+
+
+
+
+/* added on 10/02/2022 for header */
+
+
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 24px 0;
+    /* background: rgba(103, 176, 209, 0.8); */
+  }
+  #header.header-transparent {
+    background: transparent;
+  }
+  #header.header-scrolled {
+    /* background: rgba(55, 142, 181, 0.9); */
+    padding: 12px;
+  }
+  #header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Georgia", Times, serif;
+    font-style: inherit;
+    
+    
+  }
+  #header .logo h1 a, #header .logo h1 a:hover {
+    color: #053070e5;
+    text-decoration: none;
+  }
+  #header .logo img {
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+  }
+  @media (max-width: 768px) {
+    #header.header-scrolled {
+      padding: 15px 0;
+    }
+    
+  }
+
+  /* added on 10/02/2022 for header */
+  
+/* 
+  #main {
+    margin-top: 90px;
+  } */
